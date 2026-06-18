@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Shupe Tailoring Shop - Custom Tailored Clothes</title>
+    <meta name="description" content="Shupe Tailoring Shop custom tailoring for suits, dresses, shirts, and coats. Expert fitting and premium fabrics.">
+    <meta property="og:title" content="Shupe Tailoring Shop — premium custom tailoring">
+    <meta property="og:description" content="Shupe Tailoring Shop custom tailoring for suits, dresses, shirts, and coats. Get the perfect fit with premium fabrics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ozeed.com/">
+    <link rel="canonical" href="https://www.ozeed.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        :root{--accent:#0b79ff;--bg:#f7f9fc;--text:#111}
+        *{box-sizing:border-box}
+        body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;line-height:1.5;color:var(--text);background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url('https://images.unsplash.com/photo-1521334884684-d80222895322?w=1920&q=80')center/cover fixed;min-height:100vh}
+        a{color:var(--accent)}
+        .container{max-width:1100px;margin:0 auto;padding:1rem}
+        section{background:rgba(255,255,255,.02);padding:2rem 0;margin:1rem 0}
+        nav{background:rgba(255,255,255,.95);box-shadow:0 1px 8px rgba(0,0,0,.15)}
+        nav .container{display:flex;align-items:center;justify-content:space-between}
+        .brand-link{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;color:#fff;background:rgba(11,121,255,.92);padding:.5rem .9rem;border-radius:14px;box-shadow:0 4px 20px rgba(11,121,255,.12)}
+        .brand-link svg{width:40px;height:40px;display:block}
+        .brand-text{font-weight:700;font-size:1.1rem}
+        .nav-links a{margin-left:1rem;text-decoration:none;color:inherit;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.75rem 1rem;border-radius:10px;transition:background .2s,color .2s;display:inline-block}
+        .nav-links a:hover{background:rgba(11,121,255,.12);color:#0b79ff}
+        .hero{background:linear-gradient(150deg,rgba(3,43,110,0.96),rgba(12,96,185,0.92) 40%,rgba(8,52,104,0.95));padding:5rem 0;text-align:center;position:relative;overflow:hidden}
+        .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at top,rgba(255,255,255,0.08),transparent 40%),linear-gradient(180deg,rgba(0,0,0,0.18),rgba(0,0,0,0.25));pointer-events:none}
+        .hero .container{position:relative;z-index:2}
+        .hero p{color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+        main section:not(.hero) h2,
+        main section:not(.hero) h3 {
+          color:#fff;
+          text-shadow:0 1px 4px rgba(0,0,0,.5);
+        }
+        main section:not(.hero) p,
+        main section:not(.hero) li,
+        main section:not(.hero) label,
+        main section:not(.hero) input,
+        main section:not(.hero) textarea {
+          color:#d0d0d0;
+        }
+        main section:not(.hero) a {
+          color:#6dd5ed;
+        }
+        .product-card{
+          position:relative;
+          border:2px solid rgba(11,121,255,.5);
+          background:linear-gradient(135deg,rgba(12,32,64,.95),rgba(18,45,85,.95));
+          transition:all .3s ease;
+          transform:scale(1);
+        }
+        .product-card:hover{
+          border-color:#6dd5ed;
+          box-shadow:0 8px 25px rgba(11,121,255,.4);
+          transform:scale(1.05);
+          background:linear-gradient(135deg,rgba(16,42,82,.98),rgba(24,56,102,.98));
+        }
+        .product-card h3{
+          margin-top:0;
+          color:#fff;
+        }
+        .product-card p{
+          color:#d4e5ff;
+        }
+        .price{
+          display:inline-block;
+          background:rgba(11,121,255,.2);
+          color:#fff;
+          padding:0.65rem 0.85rem;
+          border-radius:10px;
+          font-weight:700;
+        }
+        .add-to-cart{
+          width:100%;
+          margin-top:.5rem;
+          cursor:pointer;
+        }
+        .add-to-cart:hover{
+          transform:scale(1.02);
+          box-shadow:0 6px 20px rgba(11,121,255,.5);
+        }
+        .search-box{
+          margin-bottom:2rem;
+          display:flex;
+          gap:0.5rem;
+        }
+        .search-box input{
+          flex:1;
+          padding:0.6rem;
+          border:2px solid rgba(11,121,255,.3);
+          border-radius:6px;
+          background:rgba(255,255,255,.9);
+          color:#111;
+          font-size:1rem;
+        }
+        .search-box input:focus{
+          outline:none;
+          border-color:#0b79ff;
+          box-shadow:0 0 10px rgba(11,121,255,.3);
+        }
+        .search-box button{
+          padding:0.6rem 1.5rem;
+          background:#0b79ff;
+          color:#fff;
+          border:none;
+          border-radius:6px;
+          cursor:pointer;
+          font-weight:600;
+          transition:all .2s;
+        }
+        .search-box button:hover{
+          background:#0964cc;
+          box-shadow:0 4px 12px rgba(11,121,255,.4);
+        }
+        .currency-row{
+          display:flex;
+          flex-wrap:wrap;
+          gap:0.75rem;
+          align-items:center;
+          margin-bottom:1rem;
+          color:#fff;
+        }
+        .currency-row label{
+          font-weight:600;
+        }
+        .currency-row select{
+          padding:0.6rem 1rem;
+          border:2px solid rgba(11,121,255,.3);
+          border-radius:6px;
+          background:#fff;
+          color:#111;
+        }
+        #cart-items p{
+          margin:0;
+        }
+        .hero h1{font-size:clamp(1.5rem,3.5vw,2.5rem);margin:0 0 .5rem;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+        .cta{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none;font-weight:600;box-shadow:0 4px 12px rgba(11,121,255,.4);transition:all .2s}
+        .features{padding:2rem 0}
+        .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+        .card{background:rgba(12,32,64,.92);padding:1rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.35);border:1px solid rgba(109,213,237,.15)}
+        footer{background:rgba(0,0,0,.6);color:#fff;padding:1rem 0;text-align:center;margin-top:2rem;border-top:1px solid rgba(255,255,255,.1)}
+        @media (prefers-reduced-motion:reduce){*{animation:none;transition:none}}
+        /* Lead magnet modal styles */
+        .lead-modal{position:fixed;inset:0;background:rgba(2,6,23,.5);display:flex;align-items:center;justify-content:center;padding:1rem;z-index:60}
+        .lead-modal[hidden]{display:none !important}
+        .lead-content{background:rgba(255,255,255,.97);padding:1.25rem;border-radius:10px;max-width:480px;width:100%;box-shadow:0 10px 40px rgba(0,0,0,.3);position:relative}
+        .lead-content .close{position:absolute;right:12px;top:8px;background:transparent;border:0;font-size:1.5rem;line-height:1;color:#444}
+        .no-thanks{position:absolute;left:12px;top:10px;background:transparent;border:0;color:#666;font-size:.95rem}
+        .lead-content input[type="email"]{width:100%;padding:.5rem;margin:.5rem 0;border:1px solid #ddd;border-radius:6px}
+        .muted{color:#666;font-size:.9rem}
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;overflow:hidden">Skip to content</a>
+    <nav>
+        <div class="container">
+            <div class="brand">
+                <a class="brand-link" href="#home" aria-label="Shupe Tailoring Shop home">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="false">
+                        <defs>
+                            <linearGradient id="g" x1="0" x2="1">
+                                <stop offset="0" stop-color="#0b79ff"/>
+                                <stop offset="1" stop-color="#6dd5ed"/>
+                            </linearGradient>
+                        </defs>
+                        <rect rx="18" ry="18" width="100" height="100" fill="url(#g)" />
+                        <text x="50" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="44" fill="#fff">S</text>
+                    </svg>
+                    <span class="brand-text">Shupe Tailoring Shop</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#cart">Cart</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="search-box" style="margin-bottom:1.5rem;">
+                    <input type="text" id="search-input" placeholder="Search styles..." aria-label="Search styles">
+                    <button type="button" id="search-btn">Search</button>
+                </div>
+                <h1>Expert Tailoring for Your Best Look</h1>
+                <p>Custom suits, dresses, shirts, and outerwear designed just for you with premium fabrics and perfect fit.</p>
+                <p>Browse our collection below to view the products available for sale, compare styles and prices, and choose the items you want before booking your fitting.</p>
+                <p><button class="cta" id="get-started" type="button">Book a Fitting</button></p>
+            </div>
+        </section>
+
+        <!-- Lead-magnet modal (revealed when user clicks Get started) -->
+        <div id="lead-modal" class="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lead-title" hidden>
+            <div class="lead-content" tabindex="-1">
+                <button class="close" id="lead-close" aria-label="Close">&times;</button>
+                <button class="no-thanks" id="lead-no" type="button">No thanks</button>
+                <h2 id="lead-title">Free Custom Consultation</h2>
+                <p>Book your first fitting and receive style guidance, fabric suggestions, and a custom measurement plan.</p>
+                <ul>
+                    <li>Personal styling consultation</li>
+                    <li>Custom-fit measurements</li>
+                    <li>Premium fabric recommendations</li>
+                </ul>
+                <form id="lead-form">
+                    <label for="lead-email">Email</label><br>
+                    <input id="lead-email" type="email" name="email" required placeholder="your@email.com"><br>
+                    <button class="cta" type="submit">Claim Discount</button>
+                </form>
+                <p class="muted">No spam — just the consultation details.</p>
+            </div>
+        </div>
+
+        <section id="products" class="features container" aria-labelledby="products-heading">
+            <h2 id="products-heading">Tailored Clothing Collection</h2>
+            <p style="margin-bottom:1rem;color:#d0d0d0;">Customers can view every product below, explore details, and add items to their cart before checkout. Use the search bar above to find styles quickly, then click a card to see the available in-stock options.</p>
+            <div class="currency-row">
+                <label for="currency-selector">Show prices in</label>
+                <select id="currency-selector" aria-label="Currency selector">
+                    <option value="MWK">MWK - Malawi Kwacha</option>
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="ZAR">ZAR - South African Rand</option>
+                </select>
+                <span>Prices are displayed in MWK by default.</span>
+            </div>
+            <div class="grid">
+                <div class="card product-card" data-product="Classic Suit" data-price="259000">
+                    <h3>👔 Classic Suit</h3>
+                    <p>Single-breasted wool suit with custom fitting and premium lining.</p>
+                    <p style="margin:0.5rem 0;color:#d0d0d0;font-size:.95rem;">Click this card to view the different classic suit styles currently in stock.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.25rem;margin:0.5rem 0">MWK 259,000</p>
+                    <button class="cta add-to-cart" data-product="Classic Suit" data-price="259000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Evening Dress" data-price="235000">
+                    <h3>👗 Evening Dress</h3>
+                    <p>Elegant custom gown with personalized styling and luxury fabric.</p>
+                    <p style="margin:0.5rem 0;color:#d0d0d0;font-size:.95rem;">Click this card to view the evening dress styles we have available in stock.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.25rem;margin:0.5rem 0">MWK 235,000</p>
+                    <button class="cta add-to-cart" data-product="Evening Dress" data-price="235000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Casual Shirt" data-price="65000">
+                    <h3>👕 Casual Shirt</h3>
+                    <p>Tailored shirt with custom collar, cuffs, and premium cotton fabric.</p>
+                    <p style="margin:0.5rem 0;color:#d0d0d0;font-size:.95rem;">Click this card to see the casual shirt styles and fabrics currently available.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.25rem;margin:0.5rem 0">MWK 65,000</p>
+                    <button class="cta add-to-cart" data-product="Casual Shirt" data-price="65000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Tailored Coat" data-price="170000">
+                    <h3>🧥 Tailored Coat</h3>
+                    <p>Warm winter coat with expert tailoring and custom fit details.</p>
+                    <p style="margin:0.5rem 0;color:#d0d0d0;font-size:.95rem;">Click this card to view the tailored coat types we have in stock now.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.25rem;margin:0.5rem 0">MWK 170,000</p>
+                    <button class="cta add-to-cart" data-product="Tailored Coat" data-price="170000" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="classic-suit-variants" class="container" hidden>
+            <h2>Classic Suit Styles in Stock</h2>
+            <p>These are the classic suit styles we have available in stock and ready for tailoring. Choose a style to review the details or add it straight to your cart.</p>
+            <div class="grid">
+                <div class="card product-card" data-product="Classic Business Suit" data-price="269000">
+                    <h3>👔 Classic Business Suit</h3>
+                    <p>Refined two-piece suit with structured shoulders and office-ready tailoring.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 269,000</p>
+                    <button class="cta add-to-cart" data-product="Classic Business Suit" data-price="269000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Classic Tuxedo" data-price="285000">
+                    <h3>🤵 Classic Tuxedo</h3>
+                    <p>Timeless evening tuxedo with satin trim and premium suiting fabric.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 285,000</p>
+                    <button class="cta add-to-cart" data-product="Classic Tuxedo" data-price="285000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Classic Linen Suit" data-price="249000">
+                    <h3>🌿 Classic Linen Suit</h3>
+                    <p>Lightweight linen suit for fresh comfort and classic tailoring in warm weather.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 249,000</p>
+                    <button class="cta add-to-cart" data-product="Classic Linen Suit" data-price="249000" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="evening-dress-variants" class="container" hidden>
+            <h2>Evening Dress Styles in Stock</h2>
+            <p>Explore the evening dress silhouettes we currently have available for custom tailoring and in-stock selection.</p>
+            <div class="grid">
+                <div class="card product-card" data-product="Satin Evening Gown" data-price="245000">
+                    <h3>💃 Satin Evening Gown</h3>
+                    <p>Soft satin gown with fitted waist and elegant drape for formal events.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 245,000</p>
+                    <button class="cta add-to-cart" data-product="Satin Evening Gown" data-price="245000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Cocktail Dress" data-price="195000">
+                    <h3>🌟 Cocktail Dress</h3>
+                    <p>Chic cocktail dress with custom fit detail and a modern silhouette.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 195,000</p>
+                    <button class="cta add-to-cart" data-product="Cocktail Dress" data-price="195000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Velvet Ball Gown" data-price="290000">
+                    <h3>👗 Velvet Ball Gown</h3>
+                    <p>Rich velvet gown with full skirt and tailored fit for grand celebrations.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 290,000</p>
+                    <button class="cta add-to-cart" data-product="Velvet Ball Gown" data-price="290000" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="casual-shirt-variants" class="container" hidden>
+            <h2>Casual Shirt Styles in Stock</h2>
+            <p>Choose from our available casual shirt styles, all tailored for comfort and everyday wear.</p>
+            <div class="grid">
+                <div class="card product-card" data-product="Linen Casual Shirt" data-price="72000">
+                    <h3>🌿 Linen Casual Shirt</h3>
+                    <p>Breathable linen shirt with a relaxed look and refined tailoring.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 72,000</p>
+                    <button class="cta add-to-cart" data-product="Linen Casual Shirt" data-price="72000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Patterned Casual Shirt" data-price="68000">
+                    <h3>🎨 Patterned Casual Shirt</h3>
+                    <p>Statement shirt with tailored fit and modern prints for everyday style.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 68,000</p>
+                    <button class="cta add-to-cart" data-product="Patterned Casual Shirt" data-price="68000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Relaxed Fit Shirt" data-price="65000">
+                    <h3>🧵 Relaxed Fit Shirt</h3>
+                    <p>Comfortable tailored shirt with a relaxed fit for casual and smart-casual looks.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 65,000</p>
+                    <button class="cta add-to-cart" data-product="Relaxed Fit Shirt" data-price="65000" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="tailored-coat-variants" class="container" hidden>
+            <h2>Tailored Coat Styles in Stock</h2>
+            <p>Discover the tailored coat types we have available, from wool coats to rain-ready outerwear.</p>
+            <div class="grid">
+                <div class="card product-card" data-product="Wool Overcoat" data-price="185000">
+                    <h3>🧥 Wool Overcoat</h3>
+                    <p>Classic wool overcoat with structured lines and warm lining.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 185,000</p>
+                    <button class="cta add-to-cart" data-product="Wool Overcoat" data-price="185000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Rain-Ready Coat" data-price="175000">
+                    <h3>☔ Rain-Ready Coat</h3>
+                    <p>Water-resistant tailored coat with a smart finish for unpredictable weather.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 175,000</p>
+                    <button class="cta add-to-cart" data-product="Rain-Ready Coat" data-price="175000" type="button">Add to Cart</button>
+                </div>
+                <div class="card product-card" data-product="Leather Trim Coat" data-price="199000">
+                    <h3>✨ Leather Trim Coat</h3>
+                    <p>Tailored coat with leather trim accents for a polished modern look.</p>
+                    <p class="price" style="font-weight:bold;color:#6dd5ed;font-size:1.1rem;margin:0.5rem 0">MWK 199,000</p>
+                    <button class="cta add-to-cart" data-product="Leather Trim Coat" data-price="199000" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h2>About Our Tailor Shop</h2>
+            <p>We create custom tailored garments for every occasion. From classic suits and evening dresses to tailored shirts and coats, our expert team delivers a perfect fit and premium craftsmanship. Every piece is made to your measurements with attention to detail and fashionable design.</p>
+        </section>
+
+        <section id="why-us" class="container">
+            <h2>Why Choose Shupe Tailoring Shop</h2>
+            <ul>
+                <li><strong>Perfect Fit:</strong> Measurements tailored to your body and style.</li>
+                <li><strong>Premium Fabrics:</strong> Choose from luxurious wool, silk, cotton, and blends.</li>
+                <li><strong>Personal Styling:</strong> Consultation for suits, dresses, shirts, and coats.</li>
+                <li><strong>Expert Craftsmanship:</strong> Skilled tailors finish every garment with care.</li>
+                <li><strong>Fast Turnaround:</strong> Ready in time for events and special occasions.</li>
+                <li><strong>Satisfaction Promise:</strong> Adjustments available until the fit is perfect.</li>
+            </ul>
+        </section>
+
+        <section id="cart" class="container">
+            <h2>Your Cart & Order</h2>
+            <h3>Order Summary</h3>
+            <div id="cart-items" style="background:rgba(255,255,255,.08);padding:1rem;border-radius:6px;margin-bottom:1rem;min-height:50px">
+                <p style="color:#d0d0d0">Your cart is empty. <a href="#products" style="color:#6dd5ed">Browse products</a></p>
+            </div>
+            <h3>Checkout</h3>
+            <form id="checkout-form" action="https://formsubmit.co/innocentkana@gmail.com" method="POST" aria-label="Checkout form">
+                <input type="hidden" name="_subject" value="New Shupe Tailoring Shop Order">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="order_details" id="order-details" value="">
+                <label for="cust-name">Full Name</label><br>
+                <input id="cust-name" type="text" name="name" required><br>
+                <label for="cust-email">Email</label><br>
+                <input id="cust-email" type="email" name="email" required><br>
+                <label for="cust-phone">Phone</label><br>
+                <input id="cust-phone" type="tel" name="phone" required><br>
+                <label for="cust-district">District</label><br>
+                <input id="cust-district" type="text" name="district" required><br>
+                <label for="cust-addr">Shipping Address</label><br>
+                <textarea id="cust-addr" name="address" required style="width:100%;padding:.5rem;margin:.5rem 0"></textarea><br>
+                    <p style="font-weight:bold;color:#0b79ff;margin:1rem 0">Total: <span id="cart-total">MWK 0</span></p>
+                <p style="color:#d0d0d0;font-size:.95rem;margin:0.5rem 0">Prices are shown in MWK. Select another currency to convert.</p>
+                <input type="submit" value="Place Order" class="cta">
+            </form>
+            <p style="margin-top:1rem"><strong>Customer Support:</strong></p>
+            <p>Email: <a href="mailto:support@shupetailoring.com">support@shupetailoring.com</a></p>
+            <p>Phone: <a href="tel:+1-800-TAILOR">+1-800-TAILOR</a></p>
+            <div style="margin-top:1rem;padding:1rem;border:1px solid rgba(109,213,237,.4);border-radius:8px;background:rgba(255,255,255,.04)">
+                <p style="margin:0 0 .5rem;font-weight:bold;color:#fff">Complaints & Alterations</p>
+                <p style="margin:0;color:#d0d0d0">If you have a concern, email <a href="mailto:complaints@shupetailoring.com" style="color:#6dd5ed">complaints@shupetailoring.com</a> with your order details, district, and issue.</p>
+            </div>
+        </section>
+        <div class="container" style="text-align:center; margin:2rem 0 1rem">
+            <button id="back-to-top" class="cta" type="button">Back to Top</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Shupe Tailoring Shop.</p>
+            <p>Visit us at <strong>www.shupe tailoring shop.com</strong></p>
+            <p>Custom tailoring crafted for you.</p>
+            <p style="font-size:.9rem;color:#d0d0d0;margin-top:.5rem">Website developed by <strong>CoogieTech</strong>.</p>
+        </div>
+    </footer>
+    <script>
+        (function(){
+            const btn = document.getElementById('get-started');
+            let modal = document.getElementById('lead-modal');
+            const close = document.getElementById('lead-close');
+            const noThanks = document.getElementById('lead-no');
+            const email = document.getElementById('lead-email');
+            const form = document.getElementById('lead-form');
+            if(!btn) return;
+
+            const showModal = () => {
+                if (!modal) return;
+                modal.hidden = false;
+                setTimeout(() => { email && email.focus(); }, 40);
+                activateFocusTrap(modal);
+            };
+
+            const hideModal = () => {
+                if (!modal) return;
+                modal.hidden = true;
+                deactivateFocusTrap();
+            };
+
+            btn.addEventListener('click', showModal);
+            close && close.addEventListener('click', hideModal);
+            noThanks && noThanks.addEventListener('click', hideModal);
+            document.addEventListener('click', (e) => {
+                if (!modal) return;
+                if (e.target === document.getElementById('lead-modal')) hideModal();
+            });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal) hideModal(); });
+            form && form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const value = email && email.value;
+                if(!value) return email.focus();
+                alert('Success! Your fitting has been booked. We will contact ' + value + ' soon with appointment details.');
+                hideModal();
+                form.reset();
+            });
+
+            // Basic focus trap implementation
+            let lastFocused = null;
+            let trapHandler = null;
+            function activateFocusTrap(root){
+                lastFocused = document.activeElement;
+                const focusable = root.querySelectorAll('a[href],button:not([disabled]),input,textarea,select,[tabindex]:not([tabindex="-1"])');
+                const first = focusable[0];
+                const last = focusable[focusable.length-1];
+                trapHandler = function(e){
+                    if (e.key !== 'Tab') return;
+                    if (focusable.length === 0) { e.preventDefault(); return; }
+                    if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+                    else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+                };
+                document.addEventListener('keydown', trapHandler);
+            }
+            function deactivateFocusTrap(){ if(trapHandler) document.removeEventListener('keydown', trapHandler); if(lastFocused) lastFocused.focus(); }
+
+            // set footer year
+            try{ document.getElementById('year').textContent = new Date().getFullYear(); }catch(e){}
+
+            // Shopping cart functionality
+            const currencySelector = document.getElementById('currency-selector');
+            const exchangeRates = {
+                MWK: 1,
+                USD: 0.0011,
+                EUR: 0.0010,
+                GBP: 0.0008,
+                ZAR: 0.020
+            };
+            const currencySymbols = {
+                MWK: 'MWK',
+                USD: '$',
+                EUR: '€',
+                GBP: '£',
+                ZAR: 'R'
+            };
+
+            let cart = [];
+            try { cart = JSON.parse(localStorage.getItem('ozeedCart')) || []; } catch(e) {}
+
+            function getSelectedCurrency() {
+                return currencySelector ? currencySelector.value : 'MWK';
+            }
+
+            function formatPrice(amount, currency) {
+                const symbol = currencySymbols[currency] || '';
+                const formatted = currency === 'MWK'
+                    ? Math.round(amount).toLocaleString()
+                    : amount.toFixed(2);
+                return currency === 'MWK' ? `${symbol} ${formatted}` : `${symbol}${formatted}`;
+            }
+
+            function convertAmount(amount, currency) {
+                const rate = exchangeRates[currency] || 1;
+                return amount * rate;
+            }
+
+            function updateProductPrices() {
+                const prices = document.querySelectorAll('.product-card .price');
+                const currency = getSelectedCurrency();
+                prices.forEach(priceEl => {
+                    const card = priceEl.closest('.product-card');
+                    if (!card) return;
+                    const basePrice = parseFloat(card.getAttribute('data-price')) || 0;
+                    const converted = convertAmount(basePrice, currency);
+                    priceEl.textContent = formatPrice(converted, currency);
+                });
+            }
+
+            function updateCartDisplay() {
+                const cartItemsDiv = document.getElementById('cart-items');
+                const cartTotalSpan = document.getElementById('cart-total');
+                const currency = getSelectedCurrency();
+                if (!cartItemsDiv) return;
+                if (cart.length === 0) {
+                    cartItemsDiv.innerHTML = '<p style="color:#d0d0d0">Your cart is empty. <a href="#products" style="color:#6dd5ed">Browse products</a></p>';
+                    cartTotalSpan.textContent = formatPrice(0, currency);
+                } else {
+                    let html = '<table style="width:100%;color:#d0d0d0"><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><th style="text-align:left">Product</th><th>Qty</th><th>Price</th></tr>';
+                    let total = 0;
+                    cart.forEach((item, idx) => {
+                        const basePrice = parseFloat(item.price) || 0;
+                        const convertedPrice = convertAmount(basePrice, currency);
+                        const subtotal = item.qty * convertedPrice;
+                        total += subtotal;
+                        html += `<tr style="border-bottom:1px solid rgba(255,255,255,.05)"><td>${item.name}</td><td>${item.qty}</td><td>${formatPrice(convertedPrice, currency)}</td><td><button type="button" onclick="removeFromCart(${idx})" style="background:transparent;color:#d0d0d0;border:1px solid #d0d0d0;padding:0.2rem 0.5rem;cursor:pointer">Remove</button></td></tr>`;
+                    });
+                    html += '</table>';
+                    cartItemsDiv.innerHTML = html;
+                    cartTotalSpan.textContent = formatPrice(total, currency);
+                }
+            }
+
+            window.removeFromCart = function(idx) {
+                cart.splice(idx, 1);
+                try { localStorage.setItem('ozeedCart', JSON.stringify(cart)); } catch(e) {}
+                updateCartDisplay();
+            };
+
+            // Add to cart buttons
+            document.querySelectorAll('.add-to-cart').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const product = e.target.getAttribute('data-product');
+                    const price = e.target.getAttribute('data-price');
+                    const existing = cart.find(item => item.name === product);
+                    if (existing) {
+                        existing.qty++;
+                    } else {
+                        cart.push({ name: product, price: price, qty: 1 });
+                    }
+                    try { localStorage.setItem('ozeedCart', JSON.stringify(cart)); } catch(e) {}
+                    updateCartDisplay();
+                    alert(product + ' added to cart!');
+                });
+            });
+
+            // Show stock variants based on which product card was clicked
+            const productVariantsMap = {
+                'Classic Suit': 'classic-suit-variants',
+                'Evening Dress': 'evening-dress-variants',
+                'Casual Shirt': 'casual-shirt-variants',
+                'Tailored Coat': 'tailored-coat-variants'
+            };
+            const allVariantSections = [
+                'classic-suit-variants',
+                'evening-dress-variants',
+                'casual-shirt-variants',
+                'tailored-coat-variants'
+            ].map(id => document.getElementById(id)).filter(Boolean);
+
+            function hideAllVariantSections() {
+                allVariantSections.forEach(section => section.hidden = true);
+            }
+
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('button')) return;
+                    const product = card.getAttribute('data-product');
+                    const variantId = productVariantsMap[product];
+                    if (variantId) {
+                        hideAllVariantSections();
+                        const section = document.getElementById(variantId);
+                        if (section) {
+                            section.hidden = false;
+                            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+
+            if (currencySelector) {
+                currencySelector.addEventListener('change', () => {
+                    updateProductPrices();
+                    updateCartDisplay();
+                });
+            }
+
+            updateProductPrices();
+
+            // Checkout form
+            const checkoutForm = document.getElementById('checkout-form');
+            if (checkoutForm) {
+                checkoutForm.addEventListener('submit', (e) => {
+                    if (cart.length === 0) {
+                        e.preventDefault();
+                        alert('Your cart is empty!');
+                        return;
+                    }
+                    const name = document.getElementById('cust-name').value;
+                    const email = document.getElementById('cust-email').value;
+                    const address = document.getElementById('cust-addr').value;
+                    const phone = document.getElementById('cust-phone').value;
+                    const district = document.getElementById('cust-district').value;
+                    const currency = getSelectedCurrency();
+                    const total = document.getElementById('cart-total').textContent;
+                    const orderSummary = cart.map(item => {
+                        const basePrice = parseFloat(item.price) || 0;
+                        const convertedPrice = convertAmount(basePrice, currency);
+                        return `${item.qty} x ${item.name} @ ${formatPrice(convertedPrice, currency)}`;
+                    }).join('; ');
+                    const orderDetails = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nDistrict: ${district}\nAddress: ${address}\nOrder: ${orderSummary}\nTotal: ${total}`;
+                    document.getElementById('order-details').value = orderDetails;
+                    // allow default submit so FormSubmit sends the email directly
+                });
+            }
+
+            const backToTop = document.getElementById('back-to-top');
+            if (backToTop) {
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Initialize cart display on page load
+            updateCartDisplay();
+
+            // Search functionality
+            const searchInput = document.getElementById('search-input');
+            const searchBtn = document.getElementById('search-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            function filterProducts(query) {
+                const lowerQuery = query.toLowerCase();
+                productCards.forEach(card => {
+                    const productName = card.getAttribute('data-product').toLowerCase();
+                    const productText = card.textContent.toLowerCase();
+                    if (productText.includes(lowerQuery) || productName.includes(lowerQuery)) {
+                        card.style.display = 'block';
+                        card.style.opacity = '1';
+                    } else {
+                        card.style.display = 'none';
+                        card.style.opacity = '0.3';
+                    }
+                });
+            }
+
+            if (searchBtn) {
+                searchBtn.addEventListener('click', () => {
+                    const query = searchInput.value;
+                    filterProducts(query);
+                });
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener('keyup', (e) => {
+                    if (e.key === 'Enter') {
+                        const query = searchInput.value;
+                        filterProducts(query);
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
